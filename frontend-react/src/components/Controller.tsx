@@ -1,5 +1,6 @@
 import { useState } from "react";
-import BetButton from "./Button.tsx";
+import PlaceBetButton from "./PlaceBetButton.tsx";
+import BetBox from "./BetBox.tsx";
 
 function Controller() {
   const [hasWon, setHasWon] = useState(false);
@@ -9,8 +10,9 @@ function Controller() {
   };
 
   return (
-    <div className="container bg-green-500 mx-auto">
-      <BetButton handlePlaceBet={handlePlaceBet} />
+    <div className="w-full md:w-[850px] lg:w-[1200px] mx-auto px-5 py-12">
+      <PlaceBetButton handlePlaceBet={handlePlaceBet} />
+      <BetBox />
     </div>
   );
 }
