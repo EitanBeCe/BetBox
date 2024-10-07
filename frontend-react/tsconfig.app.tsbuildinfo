@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/controller.tsx"],"version":"5.6.2"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/betbox.tsx","./src/components/betbutton.tsx","./src/components/controller.tsx","./src/components/placebetbutton.tsx"],"version":"5.6.2"}

@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 const arrowDown = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -34,17 +36,31 @@ const arrowUp = (
 
 type Props = {
   direction: string;
+  betDirection: string;
+  setBetDirection: Dispatch<SetStateAction<string>>;
 };
 
-function BetButton({ direction }: Props) {
+function BetButton({ direction, betDirection, setBetDirection }: Props) {
   return (
-    <div className="transition-all duration-300">
+    <div className="mx-auto">
       {direction == "up" ? (
-        <button className="transition-all duration-300 p-10 rounded-full bg-gray-200 hover:bg-green-400">
+        <button
+          onClick={() => setBetDirection("up")}
+          className={
+            "transition-all duration-300 p-10 rounded-full " +
+            (betDirection == "up" ? "bg-green-400" : "bg-gray-200")
+          }
+        >
           {arrowUp}
         </button>
       ) : (
-        <button className="p-10 rounded-full bg-gray-200 hover:bg-red-400">
+        <button
+          onClick={() => setBetDirection("down")}
+          className={
+            "transition-all duration-300 p-10 rounded-full " +
+            (betDirection == "down" ? "bg-red-400" : "bg-gray-200")
+          }
+        >
           {arrowDown}
         </button>
       )}
