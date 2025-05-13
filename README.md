@@ -1,3 +1,4 @@
+Small tailwind training
 Stack: React, Vite, Tailwind, Typescript, axios.
 
 ![Alt text](image.png)
